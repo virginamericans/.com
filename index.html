@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plane Ticket</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .ticket {
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto;
+    background-color: #930000; /* Virgin America red */
+    color: white; /* White text for better readability */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: white; /* Ensure table text is white */
+  }
+  .label {
+    font-weight: bold;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #FFD700; /* Gold color */
+    color: black; /* Black text for better readability */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .barcode {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .airline-logo {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+  }
+  @media only screen and (max-width: 600px) {
+    .ticket {
+      width: 90%;
+    }
+    .airline-logo {
+      width: 120px;
+    }
+    .barcode img {
+      max-width: 70%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="ticket">
+  <!-- Airline logo -->
+  <img class="airline-logo" src="https://i.postimg.cc/0yVZStwJ/america.png" alt="Virgin America Logo">
+
+  <h2>Virgin America Passenger Ticket</h2>
+  <table>
+    <tr>
+      <td class="label">TSA PRECHK / Passenger Name:</td>
+      <td>Charlie Lynch</td>
+    </tr>
+    <tr>
+      <td class="label">Departure Date:</td>
+      <td>30th October, 2024</td>
+    </tr>
+    <tr>
+      <td class="label">Departure:</td>
+      <td>Brooklyn, New York City</td>
+    </tr>
+    <tr>
+      <td class="label">Destination:</td>
+      <td>Houston, Texas</td>
+    </tr>
+    <tr>
+      <td class="label">Check-in Time:</td>
+      <td>2:00PM</td>
+    </tr>
+    <tr>
+      <td class="label">Departure Time:</td>
+      <td>3:00PM</td>
+    </tr>
+    <tr>
+      <td class="label">Landing Time:</td>
+      <td>4:00PM</td>
+    </tr>
+    <tr>
+      <td class="label">Number of Bags:</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td class="label">Seat Number:</td>
+      <td>8B</td>
+    </tr>
+    <tr>
+      <td class="label">Flight Code:</td>
+      <td>KH 671</td>
+    </tr>
+    <tr>
+      <td class="label">Group:</td>
+      <td>Business Class</td>
+    </tr>
+    <tr>
+      <td class="label">Gate Number:</td>
+      <td>A1</td>
+    </tr>
+    <tr>
+      <td class="label">Ticket Code:</td>
+      <td colspan="3">FKH : GYEDYG / 74765643788847</td>
+    </tr>
+  </table>
+  <button class="btn" onclick="printTicket()">Import Ticket</button>
+
+  <!-- Barcode section -->
+  <div class="barcode">
+    <img src="https://i.postimg.cc/MK8sJfwX/barcode.jpg" alt="Barcode">
+  </div>
+</div>
+
+<script>
+function printTicket() {
+    window.print();
+}
+</script>
+
+</body>
+</html>
